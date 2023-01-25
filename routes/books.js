@@ -83,7 +83,7 @@ router.put('/:id', async (req, res) => {
     book.pageCount = req.body.pageCount
     book.description = req.body.description
     if (req.body.cover != null && req.body.cover != ''){
-      saveCiver(book, req.body.cover)
+      saveCover(book, req.body.cover)
     }
     await book.save()
     res.redirect(`/books/${book.id}`)
